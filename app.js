@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  const name = req.query.nombre;
+  const name = req.query.nombre || "desconocido";
   res.send(`<h1>Hola ${name}!</h1>`);
 });
 
